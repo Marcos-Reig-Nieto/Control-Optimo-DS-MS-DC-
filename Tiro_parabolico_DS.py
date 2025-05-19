@@ -1,7 +1,9 @@
 import numpy as np
 from scipy.optimize import minimize
 import matplotlib.pyplot as plt
+import time
 
+tiempo_inicio = time.time()
 # Parámetros conocidos
 g = 9.81         # Gravedad (m/s^2)
 v0 = 20.0        # Velocidad inicial (m/s)
@@ -65,3 +67,9 @@ plt.legend()
 plt.show()
 
 print(f"Distancia máxima alcanzada: {x_traj[-1]:.2f} m")
+
+tiempo_final = time.time()
+
+tiempo_total = tiempo_final - tiempo_inicio
+
+print(f"Tiempo del programa: {tiempo_total}")
