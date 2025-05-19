@@ -1,7 +1,9 @@
 import numpy as np
 from scipy.optimize import minimize
 import matplotlib.pyplot as plt
+import time
 
+tiempo_inicio = time.time()
 # Parámetros del problema
 g = 9.81         # Gravedad (m/s^2)
 v0 = 20.0        # Velocidad inicial (m/s)
@@ -105,3 +107,9 @@ if solution.success:
     print(f"Distancia máxima alcanzada: {x_opt[-1]:.2f} m")
 else:
     print("Optimización no convergió")
+
+tiempo_final = time.time()
+
+tiempo_total = tiempo_final - tiempo_inicio
+
+print(f"El programa ha tardado: {tiempo_total}")
