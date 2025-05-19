@@ -1,7 +1,8 @@
 import numpy as np
 import matplotlib.pyplot as plt
+import time
 
-
+tiempo_inicio = time.time()
 class TiroParabolico:
     def __init__(self, v0, angulo, h0=0, masa=1.0, cd=0.47, area=0.01, rho=1.225, g=9.81):
         self.v0 = v0
@@ -105,3 +106,9 @@ def main():
 
 if __name__ == "__main__":
     main() 
+
+tiempo_final = time.time()
+
+tiempo_total = tiempo_final - tiempo_inicio
+
+print(f"El programa ha tardado: {tiempo_total}")
